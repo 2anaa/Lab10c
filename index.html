@@ -3,27 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Webpage</title>
+    <title>My Simple Web Page with Materialize</title>
+
+    <!-- Materialize CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Materialize Icons CDN (Optional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Styles (Optional) -->
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-    <h1>My Flask Web Page</h1>
-    
-    <h2>Framework Installation</h2>
-    <p>I installed the Flask framework by first ensuring that Python was installed on my system. 
-    Then, I used the command <code>pip install Flask</code> to install Flask. 
-    Flask is a lightweight web framework written in Python, which is easy to set up and use for simple web applications.</p>
-    
-    <h2>Building the Web Page</h2>
-    <p>To create the web page, I set up a basic Flask application with a single route ('/') that renders an HTML page. 
-    The HTML page was created in the <code>templates/index.html</code> file. I used Flask's <code>render_template</code> function to render the page.</p>
+<body class="grey lighten-3">
 
-    <h2>Difficulties Encountered and Solutions</h2>
-    <ul>
-        <li>Initially, I faced an issue with setting up the Flask development server. The solution was to ensure I had installed Flask correctly by using the <code>pip show Flask</code> command to verify the installation.</li>
-        <li>Another difficulty was the proper directory structure for Flask. I solved this by following the official Flask documentation to ensure the `app.py` file and the `templates/` directory were properly set up.</li>
-        <li>I had issues with running Flask on certain operating systems due to missing dependencies. I resolved this by ensuring my Python and Flask installations were up-to-date and compatible with my system.</li>
-    </ul>
+    <div class="container">
+        <h1>Welcome to My Web Page with Materialize</h1>
+        
+        <h2>Framework Installation</h2>
+        <p>
+            I installed Materialize via CDN by adding the following links in the `<head>` section:
+        </p>
+        <pre>
+            &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"&gt;
+            &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"&gt;
+        </pre>
 
-    <p>That's how I set up this simple web page using Flask!</p>
+        <h2>Building the Web Page</h2>
+        <p>
+            I used Materialize's grid system and CSS classes to build the page. For example, I used the `container` class for layout and Materialize's typography for headings and text.
+        </p>
+
+        <h2>Difficulties Encountered and Solutions</h2>
+        <ul class="collection">
+            <li class="collection-item">I initially faced difficulty using Materialize's grid system because I wasn't familiar with the grid structure. I solved this by referring to the Materialize documentation and examples.</li>
+            <li class="collection-item">Setting up Materialize through CDN was a bit tricky at first, as I wasn't sure how to properly link the stylesheets. I followed Materialize's getting started guide and got it working in no time.</li>
+        </ul>
+    </div>
+
+    <!-- Materialize JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Initialize Materialize JS (Optional) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    </script>
+
 </body>
 </html>
+
